@@ -1,0 +1,399 @@
+@font-face{
+    font-family:'razer blackwidow';
+    src: url(data/font/RazerBlackwidow-Regular.ttf);
+    font-style:normal;
+    font-weight:100;
+}
+
+body{
+    background-image:url(data/color1.png);
+    background-color:black;
+    background-repeat:repeat-y;
+    background-size:100vw;
+    overflow-x:hidden;
+}
+
+h1{
+    font-family:razer blackwidow;
+    color:white;
+    font-size:500%;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color:rgb(122, 0, 106);
+    animation-name:colorswap;
+    animation-iteration-count: infinite;
+    animation-duration:100s;
+    text-align:center;
+    margin-bottom:20vh;
+}
+
+@keyframes colorswap{
+    0%{-webkit-text-stroke-color:green}
+    20%{    -webkit-text-stroke-color:red    }
+    40%{-webkit-text-stroke-color:yellow}
+    60%{-webkit-text-stroke-color:rgb(122, 0, 106)}
+    80%{-webkit-text-stroke-color:blue}
+    100%{-webkit-text-stroke-color:green}
+
+}
+
+#headline{
+    width:30vw;
+    margin-left:35vw;
+}
+
+#link{
+    position:fixed;
+    top:20vh;
+    left:80vw;
+    
+}
+
+#link img{
+    opacity:100%;
+    transition:opacity 0.5s;
+    width:10vw;
+}
+
+#img{
+    width:50vw;
+    height:25vw;
+    background-image:url(data/maus/preshot.jpg);
+    background-size:100%;
+    border-radius:20px;
+}
+
+#lupe{
+    position:absolute;
+    width:8vw;
+    margin-left:20%;
+    margin-top:10%;
+    z-index:1000;
+    opacity:60%;
+    transition:opacity 1s;
+}
+
+#zoom{
+    position:absolute;
+    width:15%;
+    opacity:0%;
+    margin-left:16%;
+    margin-top:6%;
+    transition:opacity 1.5s, width 1.5s, margin-left 1.5s, margin-top 1.5s;
+}
+
+#lupe:hover + #zoom{
+    opacity:100%;
+    width:20%;
+    margin-top:4.5%;
+    margin-left:14.5%;
+}
+
+#lupe:hover{
+    opacity:0;
+}
+
+#wrapperbig, #wrappertwo{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    margin-bottom:20vh;
+}
+
+p,h2{
+    color:white;
+    text-align:center;
+    font-family:razer blackwidow;
+}
+
+
+
+#text{
+    width:30%;
+    padding-top:3%;
+}
+
+#wrapperbig p, #wrappertwo p{
+    font-size:200%;
+}
+
+#wrapperbig h2, #wrappertwo h2{
+    font-size:300%;
+}
+
+#wrapperbig{
+    display:flex;
+    
+}
+
+#texttwo{
+    padding-top:10%;
+}
+
+#slideshow{
+    width:30vw;
+    margin:0;
+}
+
+#slideshow img{
+    width:100%;
+}
+
+#wrapper{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width:75%;
+    margin-left:12.5%;
+}
+
+#wrapper div{
+    width:3vw;
+    height:3vw;
+    border-style:solid;
+    border-color:white;
+    border-width:5px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    transition:clip-path .4s, border-color .2s;
+}
+
+#wrapper div:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 70%, 100% 100%, 0 100%, 0% 70%, 0% 30%);
+    border-color:black;
+    cursor:pointer;
+}
+
+#bone{
+    background-color:green;
+}
+
+#btwo{
+    background-color:red;
+}
+
+#bthree{
+    background-color:yellow;
+}
+
+#bfour{
+    background-color:purple;
+}
+
+#bfive{
+    background-color:blue;
+}
+
+
+
+
+@media(min-width:800px) and (max-width:1000px){
+    /* Maus */
+    #p{
+        display:flex;
+        flex-direction:row;
+        width:100vw;
+        justify-content:space-between;
+    }
+
+    #wrapperbig{
+        flex-direction:column-reverse;
+        justify-content:center;
+    }
+
+    #text{
+        width:100vw;
+    }
+
+    #img{
+        margin-left:25vw;
+    }
+
+    #headline{
+        width:80vw;
+        margin-left:10vw;
+    }
+
+    #wrappertwo{
+        flex-direction:column;
+    }
+
+    #slideshow{
+        width:80vw;
+        margin-left:10vw;
+    }
+
+    #wrapper div{
+        width:7vw;
+        height:7vw;
+    }
+
+    /* Tastatur */
+
+    #switchbox{
+        width:100vw;
+        padding-left:40vw;
+        margin-top:10vh;
+    }
+
+    .textbox{
+        flex-direction:row;
+    }
+
+    #tastatur{
+        width:80vw;
+        margin-left:10vw;
+    }
+
+    #link img{
+        width:20vw;
+    }
+    #link{
+        left:70vw;
+    }
+}
+
+
+
+@media (max-width: 800px){
+    #headline{
+        width:90vw;
+        margin-left:5vw;
+    }
+    
+    #lupe{
+        margin-left:35%;
+        margin-top:15%;
+    }
+    
+    #zoom{
+        width:15%;
+        margin-left:30%;
+        margin-top:11%;
+    }
+    
+    #lupe:hover + #zoom{
+        width:20%;
+        margin-top:8.5%;
+        margin-left:27.5%;
+    }
+    
+
+    #img{
+        margin-left:10vw;
+        width:80vw;
+        height:35vw;
+    }
+
+    #slideshow{
+        width:100vw;
+    }
+    
+    #wrapper div{
+        width:7vw;
+        height:7vw;
+    }
+
+    h1{
+        font-size:300%;
+    }
+    
+    #text{
+        width:100vw;
+    }
+    
+    #wrapperbig{
+        flex-direction:column;
+        justify-content:center;
+    }
+
+    #wrappertwo{
+        flex-direction:column-reverse;
+        justify-content:center;
+    }
+
+    #link img{
+        width:30vw;
+    }
+
+    #link{
+        
+        left:5vw;
+    }
+
+    /* Tastatur */
+
+    #switchbox{
+        width:100vw;
+        padding-left:40vw;
+        padding-bottom:20vh;
+    }
+
+    #tastatur{
+        margin-left:10vw;
+
+    }
+}
+
+
+    #transition{
+        z-index:1000;
+        opacity:100%;
+        transition: 1s opacity ease-in-out;
+    }
+
+
+    .switches{
+        position:absolute;
+        width:20vw;
+        height:20vw;
+        margin:0;
+    }
+
+    #footer{
+        width:100vw;
+        background-image:url(data/white.png);
+        background-size:100%;
+        margin:0;
+        display:flex;
+        flex-direction:column;
+        margin-top:20vh;
+    }
+
+    #footer img{
+        height:5vw;
+        margin-left:2vw;
+        margin-right:2vw;
+    }
+
+    #ersteller{
+        color:black;
+    }
+
+    #footer div{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+    }
+
+    #footer div a{
+        opacity:100%;
+        transition:opacity 0.5s;
+    }
+
+    #footer div a:hover{
+    opacity:40%;
+    }
+
+    #razer{
+        color:rgba(102, 102, 102, 0.6);    
+    }
+
+    #tastatur{
+        width:80%;
+    }
+
+    .textbox{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
